@@ -19,5 +19,17 @@
   "bugs": {
     "url": "https://github.com/betfair-js/login/issues"
   },
-  "homepage": "https://github.com/betfair-js/login#readme"
+  "homepage": "https://github.com/betfair-js/login#readme",
+  "devDependencies": {
+    "@types/chai": "^4.0.1",
+    "@types/chai-http": "0.0.30",
+    "@types/mocha": "^2.2.41",
+    "@types/node": "6.0.78",
+    "chai": "^4.0.2",
+    "chai-http": "^3.0.0",
+    "gulp": "^3.9.1",
+    "gulp-typescript": "^3.1.7",
+    "mocha": "^3.4.2",
+    "typescript": "^2.3.2"
+  }
 }
