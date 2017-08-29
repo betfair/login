@@ -1,0 +1,23 @@
+{
+  "name": "login",
+  "version": "1.0.0",
+  "description": "Betfair login library",
+  "main": "betfair-js-login.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/betfair-js/login.git"
+  },
+  "keywords": [
+    "Betfair",
+    "Login"
+  ],
+  "author": "Betfair-JS",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/betfair-js/login/issues"
+  },
+  "homepage": "https://github.com/betfair-js/login#readme"
+}
