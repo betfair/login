@@ -1,35 +1,67 @@
 {
   "name": "login",
-  "version": "1.0.0",
-  "description": "Betfair login library",
-  "main": "betfair-js-login.js",
-  "scripts": {
-    "test": "test"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/betfair-js/login.git"
-  },
-  "keywords": [
-    "Betfair",
-    "Login"
-  ],
-  "author": "Betfair-JS",
+  "version": "0.0.0",
+  "description": "login",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/betfair-js/login/issues"
+  "repository": "",
+  "author": "",
+  "keywords": [
+    ""
+  ],
+  "files": [
+    "lib"
+  ],
+  "main": "lib/index.js",
+  "typings": "lib/index.d.ts",
+  "scripts": {
+    "clean": "rimraf lib",
+    "format": "prettier --write \"{src,test}/**/*.ts\"",
+    "lint": "tslint --force --format verbose \"src/**/*.ts\"",
+    "prepublish": "npm run build",
+    "build": "npm run format && npm run clean && npm run lint && echo Using TypeScript && tsc --version && tsc --pretty",
+    "test": "npm run build && mocha --compilers ts:ts-node/register --recursive \"test/**/*-spec.ts\"",
+    "coverage": "nyc --include=\"src/**/*.ts\" --reporter=text --reporter=html --reporter=lcov mocha --compilers ts:ts-node/register --recursive \"test/**/*-spec.ts\"",
+    "watch": "npm run build -- --watch",
+    "watch:test": "npm run test -- --watch"
   },
-  "homepage": "https://github.com/betfair-js/login#readme",
+  "dependencies": {
+    "dotenv": "^4.0.0",
+    "request": "^2.83.0"
+  },
   "devDependencies": {
-    "@types/chai": "^4.0.1",
-    "@types/chai-http": "0.0.30",
-    "@types/mocha": "^2.2.41",
-    "@types/node": "6.0.78",
-    "chai": "^4.0.2",
-    "chai-http": "^3.0.0",
-    "gulp": "^3.9.1",
-    "gulp-typescript": "^3.1.7",
-    "mocha": "^3.4.2",
-    "typescript": "^2.3.2"
+    "@types/chai": "^3.0.0",
+    "@types/dotenv": "^4.0.2",
+    "@types/mocha": "^2.0.0",
+    "@types/node": "^8.0.47",
+    "@types/request": "^2.0.7",
+    "chai": "^3.0.0",
+    "coveralls": "^2.0.0",
+    "mocha": "^3.0.0",
+    "nyc": "^10.0.0",
+    "prettier": "^1.5.2",
+    "rimraf": "^2.0.0",
+    "ts-node": "^3.0.0",
+    "tslint": "^5.0.0",
+    "tslint-config-prettier": "^1.1.0",
+    "typescript": "^2.3.0"
+  },
+  "engines": {
+    "node": ">=6.0.0"
+  },
+  "nyc": {
+    "include": [
+      "src/**/*.ts"
+    ],
+    "exclude": [
+      "lib"
+    ],
+    "extension": [
+      ".ts"
+    ],
+    "require": [
+      "ts-node/register"
+    ],
+    "reporter": [],
+    "all": true
   }
 }

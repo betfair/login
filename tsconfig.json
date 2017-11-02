@@ -1,14 +1,26 @@
 {
-    "compileOnSave": true,
-    "compilerOptions": {
-        "outDir": "dist",
-        "target": "es6",
-        "module": "commonjs",
-        "sourceMap": true,
-        "moduleResolution": "node",
-        "baseUrl": "."
-    },
-    "include": [
-        "src/**/*"
+  "compilerOptions": {
+    "declaration": true,
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "lib": [
+      "esnext"
+    ],
+    "target": "es2015",
+    "strict": true,
+    "outDir": "./lib",
+    "preserveConstEnums": true,
+    "removeComments": true,
+    "inlineSourceMap": true,
+    "typeRoots": [
+      "./node_modules/@types"
     ]
+  },
+  "include": [
+    "src/**/*"
+  ],
+  "exclude": [
+    "node_modules",
+    "**/*-spec.ts"
+  ]
 }
