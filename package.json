@@ -1,10 +1,10 @@
 {
-  "name": "login",
-  "version": "0.0.0",
-  "description": "login",
+  "name": "betfair-js-login",
+  "version": "1.0.1",
+  "description": "Betfair JavaScript Login",
   "license": "MIT",
-  "repository": "",
-  "author": "",
+  "repository": "https://github.com/betfair-js/login",
+  "author": "Mike Bateman",
   "keywords": [
     ""
   ],
@@ -25,10 +25,10 @@
     "watch:test": "npm run test -- --watch"
   },
   "dependencies": {
-    "dotenv": "^4.0.0",
     "request": "^2.83.0"
   },
   "devDependencies": {
+    "dotenv": "^4.0.0",
     "@types/chai": "^3.0.0",
     "@types/dotenv": "^4.0.2",
     "@types/mocha": "^2.0.0",
