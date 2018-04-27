@@ -1,7 +1,7 @@
 # Betfair-JS Login  
 
 Travis CI
-[![Build Status](https://travis-ci.org/betfair-js/login.svg?branch=master)](https://travis-ci.org/betfair-js/login)  
+[![Build Status](https://travis-ci.org/betfair/login.svg?branch=master)](https://travis-ci.org/betfair/login)  
 
 This is a really simple node module to allow you to login into betfair and get a session token.  
 
