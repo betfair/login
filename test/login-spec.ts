@@ -24,8 +24,20 @@ const expect = chai.expect;
 // });
 
 describe("Varriables", () => {
+
     it("BFUSERNAME", () => {
         expect(process.env.BFUSERNAME).to.not.be.undefined;
         expect(process.env.BFUSERNAME).to.be.greaterThan(2);
     });
+
+    it("BFPASSWORD", () => {
+        expect(process.env.BFPASSWORD).to.not.be.undefined;
+        expect(process.env.BFPASSWORD).to.be.greaterThan(2);
+    });
+
+    it("BFAPPKEY", () => {
+        expect(process.env.BFAPPKEY).to.not.be.undefined;
+        expect(process.env.BFAPPKEY).to.be.greaterThan(2);
+    });
+
 });
