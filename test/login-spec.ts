@@ -24,7 +24,7 @@ const expect = chai.expect;
 // });
 
 describe("Varriables", () => {
-    it("BFUSERNAME", (done) => {
+    it("BFUSERNAME", () => {
         expect(process.env.BFUSERNAME).to.not.be.undefined;
         expect(process.env.BFUSERNAME).to.be.greaterThan(2);
     });
