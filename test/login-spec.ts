@@ -3,6 +3,7 @@
 import { Login } from "../src/login";
 import * as chai from "chai";
 import * as dotenv from "dotenv";
+
 dotenv.config();
 
 const expect = chai.expect;
@@ -21,3 +22,10 @@ const expect = chai.expect;
 //     });
 //   });
 // });
+
+describe("Varriables", () => {
+    it("BFUSERNAME", (done) => {
+        expect(process.env.BFUSERNAME).to.not.be.undefined;
+        expect(process.env.BFUSERNAME).to.be.greaterThan(2);
+    });
+});
