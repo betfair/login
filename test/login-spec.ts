@@ -9,13 +9,14 @@ dotenv.config();
 const expect = chai.expect;
 
 describe("Login", () => {
-  it("login me in", function (done) {
+  it("login me in", function(done) {
     var bfLogin = new Login(
       <string>process.env.BFUSERNAME,
       <string>process.env.BFPASSWORD,
-      <string>process.env.BFAPPKEY);
+      <string>process.env.BFAPPKEY
+    );
 
-    bfLogin.login().then(function (token) {
+    bfLogin.login().then(function(token) {
       expect(token).to.not.be.undefined;
       expect(token.length).to.be.greaterThan(10);
       done();
@@ -26,16 +27,16 @@ describe("Login", () => {
 describe("Varriables", () => {
   it("BFUSERNAME", () => {
     expect(<string>process.env.BFUSERNAME).to.not.be.undefined;
-    expect(<string>process.env.BFUSERNAME).to.be.greaterThan(2);
+    expect((<string>process.env.BFUSERNAME).length).to.be.greaterThan(2);
   });
 
   it("BFPASSWORD", () => {
     expect(<string>process.env.BFPASSWORD).to.not.be.undefined;
-    expect(<string>process.env.BFPASSWORD).to.be.greaterThan(2);
+    expect((<string>process.env.BFPASSWORD).length).to.be.greaterThan(2);
   });
 
   it("BFAPPKEY", () => {
     expect(<string>process.env.BFAPPKEY).to.not.be.undefined;
-    expect(<string>process.env.BFAPPKEY).to.be.greaterThan(2);
+    expect((<string>process.env.BFAPPKEY).length).to.be.greaterThan(2);
   });
 });
