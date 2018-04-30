@@ -1,9 +1,9 @@
 {
   "name": "betfair-js-login",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Betfair JavaScript Login",
   "license": "MIT",
-  "repository": "https://github.com/betfair-js/login",
+  "repository": "https://github.com/betfair/login",
   "author": "Mike Bateman",
   "keywords": [
     ""
