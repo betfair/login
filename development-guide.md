@@ -14,5 +14,15 @@ git add -A
 git commit -a -m"Add development guide"
 git push --set-upstream origin dev-guide
 ```
-Now visit the repo on GitHub and raise a pull request. This will alert the developers at Betfair, they will check your changes and if everything looks good, you changes will be committed to the master branch.
+Now visit the repo on GitHub and raise a pull request. This will alert the developers at Betfair, they will check your changes and if everything looks good, you changes will be committed to the master branch.  
 
+Login from some public clouds is restricted and running login tests there fail. you will need to run your tests locally. To do this you will need to create a `.env` file in the root of this project (NEVER CHECK THIS FILE IN). It leeds to look like this:  
+```
+BFUSERNAME=<YOUR_USERNAME>
+BFPASSWORD=<YOUR_PASSWORD>
+BFAPPKEY=<YOUR_APPKEY>
+```
+Then you can run the tests locally by running this command  :
+```
+npm run test 
+```

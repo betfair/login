@@ -3,7 +3,3 @@ node_js:
   - 'node'
 script:
   - npm run build 
-  - mocha --compilers ts:ts-node/register --recursive \"test/**/*-spec.ts\"  # build
-  - npm run coverage  # run mocha unit tests with coverage
-after_script:
-  - 'cat coverage/lcov.info | ./node_modules/.bin/coveralls' # sends the coverage report to coveralls
